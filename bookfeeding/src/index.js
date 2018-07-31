@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import Home from './Home.js';
 //import Card from './Card.js';
-import Navigation from '.src/components/Navigation/Navigation';
+//import Navigation from '.Navigation.js';
 import registerServiceWorker from './registerServiceWorker';
+import App from './App';
 
-ReactDOM.render(<Navigation />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

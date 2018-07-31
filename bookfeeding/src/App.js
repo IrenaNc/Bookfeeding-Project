@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Navigation from './components/Navigation/Navigation.js';
+import Navigation from './Navigation';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
       <Navigation />
-      <main style={{marginTop='64px'}}>
+      <main style={{marginTop:'64p'}}>
         <p> Page content goes here!</p>
       </main>
 
