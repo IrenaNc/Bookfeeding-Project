@@ -1,20 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TopNavigation from './navigation.js'
+import Navigation from './Navigation';
+import SideDrawer from './SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
 
 class App extends Component {
+  state = {
+    sideDrawerOpen: false
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState ((prevState) => {
+      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false});
+
+  };
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />
+    }
     return (
-      <div className="App">
-      <TopNavigation />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={{height: '100%'}}>
+      <Navigation drawerClickHandler={this.drawerToggleClickHandler} />
+      <SideDrawer show={this.state.sideDrawerOpen} />
+      {backdrop}
+      <main style={{marginTop:'64px'}}>
+        <p> Page content goes here!</p>
+      </main>
+
       </div>
     );
   }
