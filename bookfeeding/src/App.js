@@ -15,23 +15,21 @@ class App extends Component {
   };
 
   backdropClickHandler = () => {
-    this.setState({sideDrawerOpen:false});
+    this.setState({sideDrawerOpen: false});
 
   };
 
   render() {
-    let sideDrawer;
     let backdrop;
 
     if (this.state.sideDrawerOpen) {
-      sideDrawer = <SideDrawer />
-      backdrop = <Backdrop />
+      backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
       <div style={{height: '100%'}}>
       <Navigation drawerClickHandler={this.drawerToggleClickHandler} />
-      <SideDrawer />
-      <Backdrop click={this.backdropClickHandler} />
+      <SideDrawer show={this.state.sideDrawerOpen} />
+      {backdrop}
       <main style={{marginTop:'64px'}}>
         <p> Page content goes here!</p>
       </main>

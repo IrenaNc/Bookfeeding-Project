@@ -4,10 +4,10 @@ import DrawerToggleButton from './DrawerToggleButton';
 import './Navigation.css';
 
 
-const Navigation = props => (
+const navigation = props => (
   <header className="toolbar">
     <nav className="toolbar__navigation">
-      <div>
+      <div className= "toolbar__toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
       <div className="toolbar__logo"><a href="/"> The Logo </a></div>
@@ -26,4 +26,4 @@ const Navigation = props => (
     </header>
 
 );
-export default Navigation;
+export default navigation;
