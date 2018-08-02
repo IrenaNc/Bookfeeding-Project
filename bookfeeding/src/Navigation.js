@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import DrawerToggleButton from './DrawerToggleButton';
 import './Navigation.css';
 
@@ -10,7 +11,9 @@ const navigation = props => (
       <div className= "toolbar__toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
-      <div className="toolbar__logo"><a href="/"> The Logo </a></div>
+      <div className="toolbar__logo"><a href="/"> Bookfeeding Project <img src={require('./logo.png')} width="40px" /> </a>
+
+      </div>
       <div className="spacer"/>
       <div className="toolbar_navigation-items">
         <ul>
