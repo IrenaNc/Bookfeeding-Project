@@ -11,7 +11,7 @@ const navigation = props => (
       <div className= "toolbar__toggle-button">
           <DrawerToggleButton click={props.drawerClickHandler} />
       </div>
-      <div className="toolbar__logo"><a href="/"> Bookfeeding Project <img src={require('./logo.png')} width="40px" /> </a>
+      <div className="toolbar__logo"><a href="/"> <img src={require('./logo.jpg')} width="280px" /> </a>
 
       </div>
       <div className="spacer"/>
