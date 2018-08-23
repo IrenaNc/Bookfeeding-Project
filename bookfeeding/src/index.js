@@ -6,7 +6,7 @@ import './index.css';
 //import Navigation from '.Navigation.js';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
-import DropDown from './DropDown';
 
-ReactDOM.render(<App />,<DropDown />, document.getElementById('root'));
+
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
